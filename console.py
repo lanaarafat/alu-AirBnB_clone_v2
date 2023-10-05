@@ -44,8 +44,13 @@ class HBNBCommand(cmd.Cmd):
         """Usage: create <class> <key 1>=<value 2> <key 2>=<value 2> ...
         Create a new class instance with given keys/values and print its id.
         """
+<<<<<<< HEAD
         try : 
          if not line:
+=======
+        try:
+            if not line:
+>>>>>>> 97c4ee067ce44c5800216a08a81648f2430a522a
                 raise SyntaxError()
             my_list = line.split(" ")
 
