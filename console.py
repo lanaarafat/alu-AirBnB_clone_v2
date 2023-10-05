@@ -46,7 +46,7 @@ class HBNBCommand(cmd.Cmd):
         """
 
 
- <<<<<<<  HEAD  
+<<<<<<<  HEAD  
          try:
             if not line:
                 =======  
