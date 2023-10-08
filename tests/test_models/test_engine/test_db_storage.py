@@ -56,7 +56,7 @@ class TestDBStorage(unittest.TestCase):
         city.state_id = state.id
         city.save()
 
-        user = User(name="isaiah", email="isaiah@gmail.com", password="isaiah7322")
+        user = User(name="lana", email="lana@gmail.com", password="lana1234")
         user.save()
 
         place = Place(name="Palace", number_rooms=4)
