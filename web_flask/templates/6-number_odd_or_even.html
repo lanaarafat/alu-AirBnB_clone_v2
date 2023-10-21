@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Odd | Even</title>
+  </head>
+  <body>
+    {% if num is divisibleby(2) %}
+    <h1>Number: {{ num }} is even</h1>
+    {% else %}
+    <h1>Number: {{ num }} is odd</h1>
+    {% endif %}
+  </body>
+</html>
