@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-"""This module defines a class to manage file storage for the HBNB clone"""
+"""This module defines a class to manage file storage for hbnb clone"""
 import json
 
 
 class FileStorage:
-    """This class manages storage of HBNB models in JSON format"""
+    """This class manages storage of hbnb models in JSON format"""
     __file_path = 'file.json'
     __objects = {}
 
@@ -20,11 +20,11 @@ class FileStorage:
             return filtered_obj
 
     def new(self, obj):
-        """Adds a new object to the storage dictionary"""
+        """Adds new object to storage dictionary"""
         self.all().update({obj.to_dict()['__class__'] + '.' + obj.id: obj})
 
     def delete(self, obj=None):
-        """Deletes an object from the objects"""
+        """Deletes obj from objects"""
         if obj is not None:
             key = key = obj.__class__.__name__ + "." + obj.id
             if key in self.__objects:
@@ -32,7 +32,7 @@ class FileStorage:
                 self.save()
 
     def save(self):
-        """Saves the storage dictionary to a file"""
+        """Saves storage dictionary to file"""
         with open(self.__file_path, 'w') as f:
             temp = {}
             temp.update(FileStorage.__objects)
@@ -41,7 +41,7 @@ class FileStorage:
             json.dump(temp, f)
 
     def reload(self):
-        """Loads the storage dictionary from a file"""
+        """Loads storage dictionary from file"""
         from models.base_model import BaseModel
         from models.user import User
         from models.place import Place
@@ -65,5 +65,5 @@ class FileStorage:
             pass
 
     def close(self):
-        """Deserializes the JSON file to objects"""
+        """Deserialize the JSON file to objects"""
         self.reload()

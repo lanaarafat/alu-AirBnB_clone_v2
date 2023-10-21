@@ -20,6 +20,7 @@ class State(BaseModel, Base):
                               cascade='all, delete-orphan')
 
     else:
+        @property
         def cities(self):
             """ Returns the list of City instances with state_id
             equals to the current State.id. """
